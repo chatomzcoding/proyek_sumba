@@ -12,12 +12,17 @@
             </div>
         @endif
 
+        <h1 class="text-center">
+            Bumdes Hidup Bersama Desa <br>
+            Kotak Kawau
+        </h1>
+
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
             <div>
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                <x-jet-label for="auth" value="{{ __('Username') }}" />
+                <x-jet-input id="auth" class="block mt-1 w-full" type="auth" name="auth" :value="old('auth')" required autofocus />
             </div>
 
             <div class="mt-4">
@@ -32,12 +37,12 @@
                 </label>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
+            <div class="flex items-center justify-center mt-4">
+                {{-- @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
-                @endif
+                @endif --}}
 
                 <x-jet-button class="ml-4">
                     {{ __('Log in') }}

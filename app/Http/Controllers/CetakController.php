@@ -14,17 +14,17 @@ class CetakController extends Controller
         switch ($sesi) {
             case 'rekening':
                 $namafile = 'Rekening';
-                $data = Rekening::all();
+                $data = Rekening::latest()->get();
                 $pdf = PDF::loadView('cetak.rekening', compact('data'));
                 break;
             case 'jurnal':
                 $namafile = 'Jurnal';
-                $data = Jurnal::all();
+                $data = Jurnal::orderBy('tanggal','DESC')->get();
                 $pdf = PDF::loadView('cetak.jurnal', compact('data'));
                 break;
             case 'laporan':
                 $namafile = 'Laporan';
-                $data = Jurnal::all();
+                $data = Jurnal::latest()->get();
                 $pdf = PDF::loadView('cetak.laporan', compact('data'));
                 break;
             

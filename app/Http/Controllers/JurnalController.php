@@ -23,7 +23,7 @@ class JurnalController extends Controller
             $akhir = $_GET['akhir'];
             $jurnal = Jurnal::where('tanggal','>=',$_GET['awal'])->where('tanggal','<=',$_GET['akhir'])->latest()->get();
         } else {
-            $jurnal = Jurnal::latest()->get();
+            $jurnal = Jurnal::orderBy('tanggal','DESC')->get();
         }
         
         return view('jurnal.index', compact('jurnal','rekening','awal','akhir'));

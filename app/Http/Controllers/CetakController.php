@@ -34,6 +34,6 @@ class CetakController extends Controller
         }
            
      
-        return $pdf->download($namafile.'.pdf');
+        return $pdf->stream($namafile.'.pdf');
     }
 }

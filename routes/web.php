@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CetakController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JurnalController;
 use App\Http\Controllers\LaporanController;
@@ -31,4 +32,6 @@ Route::middleware([
     Route::resource('/rekening',RekeningController::class);
     Route::resource('/jurnal',JurnalController::class);
     Route::resource('/laporan',LaporanController::class);
+
+    Route::get('cetak/{sesi}', [CetakController::class,'index']);
 });

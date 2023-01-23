@@ -4,6 +4,7 @@
         <div class="card-body">
             <header>
                 <button data-bs-toggle="modal" data-bs-target="#tambah" class="btn btn-primary">Tambah</button>
+                <a href="{{ url('cetak/rekening') }}" class="btn btn-info float-end"><i class="bx bx-print"></i> CETAK DATA</a>
             </header>
             <main>
                 <div class="table-responsive">

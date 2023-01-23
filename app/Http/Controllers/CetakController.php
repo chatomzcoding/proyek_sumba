@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Jurnal;
 use App\Models\Rekening;
 use Illuminate\Http\Request;
 use PDF;
@@ -15,6 +16,16 @@ class CetakController extends Controller
                 $namafile = 'Rekening';
                 $data = Rekening::all();
                 $pdf = PDF::loadView('cetak.rekening', compact('data'));
+                break;
+            case 'jurnal':
+                $namafile = 'Jurnal';
+                $data = Jurnal::all();
+                $pdf = PDF::loadView('cetak.jurnal', compact('data'));
+                break;
+            case 'laporan':
+                $namafile = 'Laporan';
+                $data = Jurnal::all();
+                $pdf = PDF::loadView('cetak.laporan', compact('data'));
                 break;
             
             default:

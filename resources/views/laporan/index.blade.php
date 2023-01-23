@@ -19,6 +19,9 @@
                             <button type="submit" class="btn btn-primary">LIHAT</button>
                             <a href="{{ url('jurnal') }}" class="btn btn-secondary">Bersihkan Filter</a>
                         </div>
+                        <div class="col-md-4 text-end">
+                            <a href="{{ url('cetak/laporan') }}" target="_blank" class="btn btn-info"><i class="bx bx-print"></i> CETAK DATA</a>
+                        </div>
                     </div>
                 </form>
                 <div class="table-responsive mt-4">

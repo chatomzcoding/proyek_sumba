@@ -4,6 +4,8 @@
         <div class="card-body">
             <header class="mb-2">
                 <button data-bs-toggle="modal" data-bs-target="#tambah" class="btn btn-primary">Tambah Jurnal</button>
+                <a href="{{ url('cetak/jurnal') }}" target="_blank" class="btn btn-info float-end"><i class="bx bx-print"></i> CETAK DATA</a>
+
             </header>
             <main>
                 <form action="{{ url('/jurnal') }}" method="get">

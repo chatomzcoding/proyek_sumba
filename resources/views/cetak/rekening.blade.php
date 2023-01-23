@@ -1,6 +1,8 @@
 <x-cetak title="rekening">
     <header class="text-center">
-        Cetak Data Rekening
+        <h2>BUMDES HIDUP BERSAMA</h2>
+        <p>Data Rekening</p>
+        <p>{{ bulan_indo() }} - {{ ambil_tahun() }}</p>
     </header>
     <main>
         <table class="table1">
